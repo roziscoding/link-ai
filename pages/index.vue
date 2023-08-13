@@ -7,10 +7,6 @@ const config = useRuntimeConfig();
 useSeoMeta({
   title: config.linkTreePageTitle,
 });
-
-definePageMeta({
-  auth: false,
-});
 </script>
 
 <template>

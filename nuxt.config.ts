@@ -15,7 +15,7 @@ export default defineNuxtConfig({
   plugins: [{ src: "~/plugins/vercel.ts", mode: "client" }],
   auth: {
     provider: { type: "authjs" },
-    globalAppMiddleware: true,
+    globalAppMiddleware: false,
   },
   runtimeConfig: {
     linkTreePageTitle: "Linka Aí",

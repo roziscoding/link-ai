@@ -1,8 +1,4 @@
 <script lang="ts" setup>
-definePageMeta({
-  auth: false,
-});
-
 onMounted(() => {
   const { signOut } = useAuth();
   return signOut({ callbackUrl: "/" });

@@ -3,7 +3,7 @@ import { Link } from "components/link/types";
 import LinkRow from "~/components/link/LinkRow.vue";
 import NewLinkModal from "~/components/NewLinkModal.vue";
 
-const { signOut, data } = useAuth();
+const { signOut } = useAuth();
 
 function handleSignout() {
   signOut({ callbackUrl: "/" });
@@ -23,6 +23,8 @@ function edit(link: Link) {
   editing.value = link;
   showNew.value = true;
 }
+
+definePageMeta({ middleware: ["auth"] });
 </script>
 
 <template>
