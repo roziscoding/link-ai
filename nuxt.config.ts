@@ -12,6 +12,7 @@ export default defineNuxtConfig({
     },
   },
   modules: ["@nuxtjs/tailwindcss", "@sidebase/nuxt-auth"],
+  plugins: [{ src: "~/plugins/vercel.ts", mode: "client" }],
   auth: {
     provider: { type: "authjs" },
     globalAppMiddleware: true,
