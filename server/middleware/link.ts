@@ -1,5 +1,5 @@
 import { H3Event } from "h3";
-import { Link } from "~/components/link/types";
+import { Link } from "../../components/link/types";
 
 function getRequestUrl(event: H3Event) {
   return new URL(getRequestPath(event), `https://${getRequestHost(event)}`);

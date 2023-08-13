@@ -1,5 +1,5 @@
 import { useValidatedBody } from "h3-zod";
-import { Link } from "~/components/link/types";
+import { Link } from "../../components/link/types";
 import { hasSession } from "../middleware/1_session";
 
 export default eventHandler(async (event) => {

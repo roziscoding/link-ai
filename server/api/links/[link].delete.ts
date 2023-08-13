@@ -1,9 +1,4 @@
-import { H3Event } from "h3";
-import { Link } from "~/components/link/types";
-
-function getRequestUrl(event: H3Event) {
-  return new URL(getRequestPath(event), `https://${getRequestHost(event)}`);
-}
+import { Link } from "../../../components/link/types";
 
 export default defineEventHandler(async (event) => {
   const key = getRouterParam(event, "link");

@@ -1,4 +1,4 @@
-import { Link } from "~/components/link/types";
+import { Link } from "../../components/link/types";
 import { hasSession } from "../middleware/1_session";
 
 export default defineEventHandler(async (event) => {
