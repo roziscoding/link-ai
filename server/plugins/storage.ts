@@ -11,5 +11,7 @@ export default defineNitroPlugin(() => {
   });
 
   // Mount driver
-  storage.mount("links", driver);
+  const mounted = storage.getMount("links");
+
+  if (!mounted) storage.mount("links", driver);
 });
