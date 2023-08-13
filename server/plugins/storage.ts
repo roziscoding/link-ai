@@ -1,6 +1,6 @@
 import mongoDriver from "unstorage/drivers/mongodb";
 
-export default defineNitroPlugin(() => {
+export default defineNitroPlugin(async () => {
   const storage = useStorage();
 
   // Dynamically pass in credentials from runtime configuration, or other sources
@@ -13,5 +13,5 @@ export default defineNitroPlugin(() => {
   // Mount driver
   const mounted = storage.getMount("links");
 
-  if (!mounted) storage.mount("links", driver);
+  if (!mounted || mounted.driver.name === "memory") storage.mount("links", driver);
 });
