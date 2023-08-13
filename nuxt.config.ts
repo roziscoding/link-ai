@@ -4,7 +4,6 @@ export default defineNuxtConfig({
     shim: false,
   },
   nitro: {
-    preset: "deno-deploy",
     devStorage: {
       links: {
         driver: "fs",
@@ -26,6 +25,9 @@ export default defineNuxtConfig({
     authGithubId: "",
     authSecret: "",
     adminEmails: "",
+    dbUri: "",
+    dbName: "linkai",
+    dbCollection: "links",
   },
   devtools: {
     enabled: true,
