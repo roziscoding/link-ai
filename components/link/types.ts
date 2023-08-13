@@ -17,6 +17,7 @@ export const Link = z.object({
   url: z.string().url(),
   icon: Icon,
   listed: z.union([zh.boolAsString.optional().default("false"), z.boolean().default(false)]),
+  rel: z.string().optional(),
 });
 
 export type Link = z.infer<typeof Link>;

@@ -18,6 +18,7 @@ const url = ref(props.link?.url ?? "");
 const id = ref(props.link?.id ?? "");
 const icon = ref(extractIconSlug(props.link?.icon));
 const listed = ref(props.link?.listed ?? false);
+const rel = ref(props.link?.rel ?? "");
 
 const emit = defineEmits(["cancel", "success"]);
 
@@ -30,11 +31,12 @@ const {
   watch: false,
   method: "POST",
   body: {
-    id: id,
-    name: name,
-    url: url,
-    listed: listed,
-    icon: icon,
+    id,
+    name,
+    url,
+    listed,
+    icon,
+    rel,
   },
 });
 
@@ -69,6 +71,7 @@ watch(
           name="link_title"
           id="link_title"
           clearable
+          data-1p-ignore
           v-model="name"
           @clear="name = ''"
           :readonly="statusIs('pending')"
@@ -83,6 +86,7 @@ watch(
           name="link_url"
           id="link_url"
           clearable
+          data-1p-ignore
           v-model="url"
           @clear="url = ''"
           :readonly="statusIs('pending')"
@@ -101,7 +105,20 @@ watch(
           v-model="id"
           @clear="id = ''"
           :readonly="statusIs('pending')"
-          aria-autocomplete="none"
+        />
+        <TextInput
+          class="mb-3"
+          type="text"
+          label="link rel"
+          hint="optional rel attribute for the link"
+          placeholder="me"
+          data-1p-ignore
+          name="link_rel"
+          id="link_rel"
+          clearable
+          v-model="rel"
+          @clear="rel = ''"
+          :readonly="statusIs('pending')"
         />
         <AutoComplete
           class="mb-3"
