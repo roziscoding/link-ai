@@ -6,6 +6,16 @@ const config = useRuntimeConfig();
 
 useSeoMeta({
   title: config.linkTreePageTitle,
+  description: config.subtitle,
+  ogTitle: config.linkTreePageTitle,
+  ogDescription: config.subtitle,
+  ogImage: config.avatarUrl,
+});
+
+useHead({
+  htmlAttrs: {
+    lang: config.htmlLang ?? "pt",
+  },
 });
 </script>
 

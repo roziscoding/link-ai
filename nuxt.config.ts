@@ -29,6 +29,7 @@ export default defineNuxtConfig({
     dbUri: "",
     dbName: "linkai",
     dbCollection: "links",
+    htmlLang: "pt",
   },
   devtools: {
     enabled: true,
