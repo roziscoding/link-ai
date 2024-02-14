@@ -5,6 +5,6 @@
 </template>
 <style scoped>
 .main-content {
-  background-image: url('~/background.png');
+  background-image: url('assets/background.png');
 }
 </style>
