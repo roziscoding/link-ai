@@ -15,7 +15,7 @@
     "@sidebase/nuxt-auth": "^0.6.0-beta.4",
     "@types/node": "^18.17.0",
     "nuxt": "^3.6.5",
-    "simple-icons": "^9.8.0"
+    "simple-icons": "^13.10.0"
   },
   "dependencies": {
     "@vercel/analytics": "^1.0.2",
